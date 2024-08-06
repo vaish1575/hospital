@@ -7,12 +7,16 @@ from django.contrib import admin
 from django.urls import path
 from hospital import views
 from django.contrib.auth.views import LoginView,LogoutView
+from django.urls import path
+from django.contrib.auth import views as auth_views
+from django.urls import reverse_lazy
+
 
 
 #-------------FOR ADMIN RELATED URLS
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('',views.home_view,name=''),
+    path('',views.home_view,name="home"),
 
 
     path('aboutus', views.aboutus_view),
@@ -27,14 +31,16 @@ urlpatterns = [
     path('doctorsignup', views.doctor_signup_view,name='doctorsignup'),
     path('patientsignup', views.patient_signup_view),
     
-    path('adminlogin', LoginView.as_view(template_name='hospital/adminlogin.html')),
-    path('doctorlogin', LoginView.as_view(template_name='hospital/doctorlogin.html')),
-    path('patientlogin', LoginView.as_view(template_name='hospital/patientlogin.html')),
+    path('adminlogin', auth_views.LoginView.as_view(template_name='hospital/adminlogin.html'),name="adminlogin" ),
+    path('doctorlogin', auth_views.LoginView.as_view(template_name='hospital/doctorlogin.html'),name="doctorlogin"),
+    path('patientlogin',auth_views.LoginView.as_view(template_name='hospital/patientlogin.html'),name="patientlogin"),
 
 
     path('afterlogin', views.afterlogin_view,name='afterlogin'),
-    path('logout', LogoutView.as_view(template_name='hospital/index.html'),name='logout'),
-
+    #path('login/', views.CustomLoginView.as_view(), name='login'),
+    # path('logout/', auth_views.LogoutView.as_view(),name='logout'),
+    path('logout', views.custom_logout, name='logout'),
+    # path('logout/', views.CustomLogoutView.as_view(), name='logout'),
 
     path('admin-dashboard', views.admin_dashboard_view,name='admin-dashboard'),
 
@@ -99,6 +105,19 @@ urlpatterns +=[
     path('patient-view-doctor', views.patient_view_doctor_view,name='patient-view-doctor'),
     path('searchdoctor', views.search_doctor_view,name='searchdoctor'),
     path('patient-discharge', views.patient_discharge_view,name='patient-discharge'),
+
+
+
+    path('room_management', views.manage_rooms, name='room_management'),
+    path('room_list/', views.room_list, name='room_list'),
+    # path('department/', views.department_create, name='department'),
+    path('department/', views.department_list, name='department'),
+    # path('departments/', views.department_list, name='departments'),
+    path('appointments-report/', views.get_appointments_report, name='appointments_report'),
+    path('discharge-report/', views.get_discharge_report, name='discharge_report'),
+
+
+
 
 ]
 

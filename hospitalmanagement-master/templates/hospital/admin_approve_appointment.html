@@ -19,10 +19,7 @@
     }
   </style>
 </head>
-<!--
-written By : sumit kumar
-facebook : fb.com/sumit.luv
--->
+
 <div class="container">
   <div class="panel panel-primary">
     <div class="panel-heading">
@@ -42,11 +39,11 @@ facebook : fb.com/sumit.luv
       </thead>
       {% for a in appointments %}
       <tr>
-        <td> {{a.doctorName}}</td>
-        <td>{{a.patientName}}</td>
+        <td> {{a.doctorname}}</td>
+        <td>{{a.patientname}}</td>
         <td>{{a.description}}</td>
-        <td>{{a.appointmentDate}}</td>
-        <td>{{a.appointmentTime}}</td>
+        <td>{{a.appointmentdate}}</td>
+        <td>{{a.appointmenttime}}</td>
         <td><a class="btn btn-primary btn-xs" href="{% url 'approve-appointment' a.id  %}"><span class="glyphicon glyphicon-ok"></span></a></td>
         <td><a class="btn btn-danger btn-xs" href="{% url 'reject-appointment' a.id  %}"><span class="glyphicon glyphicon-trash"></span></a></td>
       </tr>
@@ -56,10 +53,5 @@ facebook : fb.com/sumit.luv
 
 
 </div>
-<!--
-developed By : sumit kumar
-facebook : fb.com/sumit.luv
-youtube : youtube.com/lazycoders
--->
 
 {% endblock content %}

@@ -12,12 +12,12 @@ class Migration(migrations.Migration):
     operations = [
         migrations.AddField(
             model_name='appointment',
-            name='doctorName',
+            name='doctorname',
             field=models.CharField(max_length=40, null=True),
         ),
         migrations.AddField(
             model_name='appointment',
-            name='patientName',
+            name='patientname',
             field=models.CharField(max_length=40, null=True),
         ),
         migrations.AlterField(

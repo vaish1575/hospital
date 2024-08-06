@@ -1,0 +1,44 @@
+{% extends 'hospital/admin_base.html' %}
+{% load widget_tweaks %}
+{% block content %}
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-8 offset-md-2">
+      <div class="card">
+        <div class="card-header">
+          <h3 class="card-title">Add Department</h3>
+        </div>
+        <div class="card-body">
+          <form method="post">
+            {% csrf_token %}
+            <div class="form-group">
+              <label for="dept_name">Department Name</label>
+              <input type="text" class="form-control" id="dept_name" name="dept_name" placeholder="Enter Department Name">
+            </div>
+            <div class="form-group">
+              <label for="dept_id">Department ID</label>
+              <input type="text" class="form-control" id="dept_id" name="dept_id" placeholder="Enter Department ID">
+            </div>
+            <div class="form-group">
+              <label for="dept_contact">Department Contact</label>
+              <input type="text" class="form-control" id="dept_contact" name="dept_contact" placeholder="Enter Department Contact">
+            </div>
+            <div class="form-group">
+              <label for="head_id">Department Head ID</label>
+              <input type="text" class="form-control" id="head_id" name="head_id" placeholder="Enter Department Head ID">
+            </div>
+            {% csrf_token %}
+            <button type="submit" class="btn btn-primary">Save</button>
+            
+            
+           
+          </form>
+          <a href="{% url 'departments' %}" class="btn btn-primary mt-3">Go to Department List</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock content %}

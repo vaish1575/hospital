@@ -13,22 +13,22 @@ class Migration(migrations.Migration):
     operations = [
         migrations.AlterField(
             model_name='appointment',
-            name='doctorId',
+            name='doctorid',
             field=models.ForeignKey(null=True, on_delete=django.db.models.deletion.SET_NULL, to='hospital.Doctor'),
         ),
         migrations.AlterField(
             model_name='appointment',
-            name='patientId',
+            name='patientid',
             field=models.ForeignKey(null=True, on_delete=django.db.models.deletion.SET_NULL, to='hospital.Patient'),
         ),
         migrations.AlterField(
             model_name='patient',
-            name='assignedDoctorId',
+            name='assigneddoctorid',
             field=models.ForeignKey(null=True, on_delete=django.db.models.deletion.SET_NULL, to='hospital.Doctor'),
         ),
         migrations.AlterField(
             model_name='patientdischargedetails',
-            name='patientId',
+            name='patientid',
             field=models.ForeignKey(null=True, on_delete=django.db.models.deletion.SET_NULL, to='hospital.Patient'),
         ),
     ]

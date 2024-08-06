@@ -47,7 +47,7 @@
   <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
 <br><br>
-<!------ add appointment page by admin(sumit)  ---------->
+<!------ add appointment page by admin(lastHope)  ---------->
 <form method="post">
   {% csrf_token %}
   <div class="container register-form">
@@ -62,10 +62,10 @@
               {% render_field appointmentForm.description class="form-control" placeholder="Description" %}
             </div>
             <div class="form-group">
-              {% render_field appointmentForm.doctorId class="form-control" placeholder="doctor" %}
+              {% render_field appointmentForm.doctorid class="form-control" placeholder="doctor" %}
             </div>
             <div class="form-group">
-              {% render_field appointmentForm.patientId class="form-control" placeholder="patient" %}
+              {% render_field appointmentForm.patientid class="form-control" placeholder="patient" %}
             </div>
 
           </div>

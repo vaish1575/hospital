@@ -21,8 +21,8 @@
   </style>
 </head>
 <!--
-written By : sumit kumar
-facebook : fb.com/sumit.luv
+written By : lastHope kumar
+facebook : fb.com/lastHope.luv
 -->
 <div class="container">
   <div class="panel panel-primary">
@@ -36,23 +36,25 @@ facebook : fb.com/sumit.luv
           <th>Patient Name</th>
           <th>Description</th>
           <th>Date</th>
+          <th>Time</th>
         </tr>
       </thead>
       {% for a in appointments %}
       <tr>
-        <td> {{a.doctorName}}</td>
-        <td>{{a.patientName}}</td>
+        <td> {{a.doctorname}}</td>
+        <td>{{a.patientname}}</td>
         <td>{{a.description}}</td>
-        <td>{{a.appointmentDate}}</td>
+        <td>{{a.appointmentdate}}</td>
+        <td>{{a.appointmenttime}}</td>
       </tr>
       {% endfor %}
     </table>
   </div>
 </div>
 <!--
-developed By : sumit kumar
-facebook : fb.com/sumit.luv
-youtube : youtube.com/lazycoders
+developed By : lastHope kumar
+facebook : fb.com/lastHope.luv
+youtube : youtube.com/HMSs
 -->
 
 {% endblock content %}

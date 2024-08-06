@@ -12,7 +12,7 @@ class Migration(migrations.Migration):
     operations = [
         migrations.AddField(
             model_name='appointment',
-            name='appointmentTime',
+            name='appointmenttime',
             field=models.TimeField(auto_now=True),
         ),
     ]

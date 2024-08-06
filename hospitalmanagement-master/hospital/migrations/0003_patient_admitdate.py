@@ -12,7 +12,7 @@ class Migration(migrations.Migration):
     operations = [
         migrations.AddField(
             model_name='patient',
-            name='admitDate',
+            name='admitdate',
             field=models.DateField(auto_now=True),
         ),
     ]

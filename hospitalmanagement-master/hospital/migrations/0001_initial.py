@@ -32,7 +32,7 @@ class Migration(migrations.Migration):
                 ('address', models.CharField(max_length=40)),
                 ('mobile', models.CharField(max_length=40, null=True)),
                 ('symptoms', models.CharField(max_length=100, null=True)),
-                ('assignedDoctorId', models.PositiveIntegerField()),
+                ('assigneddoctorid', models.PositiveIntegerField()),
                 ('status', models.BooleanField(default=False)),
                 ('user', models.OneToOneField(on_delete=django.db.models.deletion.CASCADE, to=settings.AUTH_USER_MODEL)),
             ],

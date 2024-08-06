@@ -56,7 +56,7 @@
 {% endif %}
 
 
-<!------ add appointment page by patient(sumit)  ---------->
+<!------ add appointment page by patient(lastHope)  ---------->
 <form method="post">
   {% csrf_token %}
   <div class="container register-form">
@@ -71,9 +71,14 @@
               {% render_field appointmentForm.description class="form-control" placeholder="Description" %}
             </div>
             <div class="form-group">
-              {% render_field appointmentForm.doctorId class="form-control" placeholder="doctor" %}
+              {% render_field appointmentForm.doctorid class="form-control" placeholder="doctor" %}
             </div>
-            
+            <div class="form-group">
+              {% render_field appointmentForm.appointmentdate class="form-control"  %}
+            </div>
+            <div class="form-group">
+              {% render_field appointmentForm.appointmenttime class="form-control" %}
+            </div>
 
 
 
@@ -86,9 +91,9 @@
   </div>
 </form>
 <!--
-developed By : sumit kumar
-facebook : fb.com/sumit.luv
-youtube : youtube.com/lazycoders
+developed By : lastHope kumar
+facebook : fb.com/lastHope.luv
+youtube : youtube.com/HMSs
 -->
 
 

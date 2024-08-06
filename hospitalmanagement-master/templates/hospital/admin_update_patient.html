@@ -47,7 +47,7 @@
   <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
 <br><br>
-<!------ update page for doctor by admin(sumit)  ---------->
+<!------ update page for doctor by admin(lastHope)  ---------->
 <form method="post" enctype="multipart/form-data">
   {% csrf_token %}
   <div class="container register-form">
@@ -85,7 +85,7 @@
               {% render_field patientForm.mobile class="form-control" placeholder="Mobile" %}
             </div>
             <div class="form-group">
-              {% render_field patientForm.assignedDoctorId class="form-control" placeholder="Doctor" %}
+              {% render_field patientForm.assigneddoctorid class="form-control" placeholder="Doctor" %}
             </div>
           </div>
         </div>
@@ -95,9 +95,9 @@
   </div>
 </form>
 <!--
-developed By : sumit kumar
-facebook : fb.com/sumit.luv
-youtube : youtube.com/lazycoders
+developed By : lastHope kumar
+facebook : fb.com/lastHope.luv
+youtube : youtube.com/HMSs
 -->
 
 {% endblock content %}

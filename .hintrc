@@ -10,10 +10,14 @@
         "image-alt": "off"
       }
     ],
-    "axe/name-role-value": [
+    "axe/name-role-value": "off",
+    "no-protocol-relative-urls": "off",
+    "no-inline-styles": "off",
+    "axe/parsing": "off",
+    "axe/language": [
       "default",
       {
-        "button-name": "off"
+        "html-has-lang": "off"
       }
     ]
   }

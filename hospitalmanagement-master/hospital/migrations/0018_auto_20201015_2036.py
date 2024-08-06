@@ -12,22 +12,22 @@ class Migration(migrations.Migration):
     operations = [
         migrations.AlterField(
             model_name='appointment',
-            name='doctorId',
+            name='doctorid',
             field=models.PositiveIntegerField(null=True),
         ),
         migrations.AlterField(
             model_name='appointment',
-            name='patientId',
+            name='patientid',
             field=models.PositiveIntegerField(null=True),
         ),
         migrations.AlterField(
             model_name='patient',
-            name='assignedDoctorId',
+            name='assigneddoctorid',
             field=models.PositiveIntegerField(null=True),
         ),
         migrations.AlterField(
             model_name='patientdischargedetails',
-            name='patientId',
+            name='patientid',
             field=models.PositiveIntegerField(null=True),
         ),
     ]
